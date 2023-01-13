@@ -4,7 +4,7 @@ Create app in the slack dev portal.
 https://api.slack.com/apps/{APPID}/slash-commands
 
 2: Generate bot token in OAuth & Permissions
-https://api.slack.com/apps/{APPID}/oauth?
+https://api.slack.com/apps/{APPID}/oauth
 
 Run `slack-bot: configure (token:<Token>)`
 
