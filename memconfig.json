@@ -1,26 +1,71 @@
 {
-    "schema": {
-      "types": [
-        {
-          "name": "Root",
-          "fields": [
-          ],
-          "actions": [
-            {
-              "name": "configure",
-              "description": "Setup slack token",
-              "type": "Void",
-              "params": [
-                {
-                  "name": "token",
-                  "type": "String"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "dependencies": {}
+  "schema": {
+    "types": [
+      {
+        "name": "Root",
+        "fields": [],
+        "actions": [
+          {
+            "name": "configure",
+            "description": "",
+            "type": "Void",
+            "params": [
+              {
+                "name": "token",
+                "type": "String"
+              }
+            ]
+          },
+          {
+            "name": "sendMsg",
+            "description": "",
+            "type": "Void",
+            "params": [
+              {
+                "name": "text",
+                "type": "String"
+              },
+              {
+                "name": "name",
+                "type": "String"
+              }
+            ]
+          },
+          {
+            "name": "endpoint",
+            "type": "String",
+            "hints": {
+              "hidden": true
+            },
+            "params": [
+              {
+                "name": "method",
+                "type": "String"
+              },
+              {
+                "name": "body",
+                "type": "String"
+              },
+              {
+                "name": "path",
+                "type": "String"
+              },
+              {
+                "name": "query",
+                "type": "String"
+              },
+              {
+                "name": "headers",
+                "type": "String"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "dependencies": {
+    "openai": "openai:",
+    "http": "http:"
   }
-  
+}
