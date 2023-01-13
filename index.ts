@@ -10,7 +10,7 @@ export const Root = {
   },
 };
 
-export async function endpoint({ args: { path, query, headers, body } }) {
+export async function endpoint({ args: { path, body } }) {
   if (!body || !path) {
     return;
   }
@@ -44,7 +44,6 @@ export async function endpoint({ args: { path, query, headers, body } }) {
 
 async function generateImg(url: string, text: string): Promise<void> {
   const res = await nodes.openai.image({ prompt: text, n: 1 }).$invoke();
-  console.log(JSON.stringify(res));
 
   return await api("POST", url, {
     replace_original: "true",
@@ -54,6 +53,7 @@ async function generateImg(url: string, text: string): Promise<void> {
 
 async function completionChat(url: string, text: string): Promise<void> {
   const gptText = await nodes.openai.completion({ prompt: text }).$invoke();
+  
   return await api("POST", url, {
     replace_original: "true",
     text: gptText,

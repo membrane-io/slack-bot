@@ -1,4 +1,4 @@
-Create app in the slack dev portal.
+Create app in the [slack dev portal](https://api.slack.com/apps/).
 
 1: Configure the program callback url in your app
 https://api.slack.com/apps/{APPID}/slash-commands
