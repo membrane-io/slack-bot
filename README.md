@@ -1,11 +1,12 @@
-Create app in the [slack dev portal](https://api.slack.com/apps/).
+## Setup
 
-1: Configure the program callback url in your app
-https://api.slack.com/apps/{APPID}/slash-commands
+1. [Run this program](https://www.membrane.io/docs/guide/using-membrane/installing-a-driver) on you Membrane account
+2. [Create a new Slack App](https://api.slack.com/apps/).
+3. Configure your Slack app:
+    1. Under "Slash Commands": create a new slash command (e.g. `/botgpt`) to hit your [Membrane program's endpoint](https://www.membrane.io/docs/guide/conventions/the-endpoint-action)
+    1. Under "OAuth and Permissions": Generate a "Bot User OAuth token"
+6. Use the token from the previous step to configure your Membrane program (Use the graph explorer or `mctl action slack-bot:configure(token:"<your-token>")`)
 
-2: Generate bot token in OAuth & Permissions
-https://api.slack.com/apps/{APPID}/oauth
+## Usage
 
-Run `slack-bot: configure (token:<Token>)`
-
-3: use `/botgpt help` command in a channel with app permissions
+Use `/botgpt help` command in a channel with app permissions
