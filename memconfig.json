@@ -3,7 +3,12 @@
     "types": [
       {
         "name": "Root",
-        "fields": [],
+        "fields": [
+          {
+            "name": "status",
+            "type": "String"
+          }
+        ]
         "actions": [
           {
             "name": "configure",
