@@ -8,6 +8,13 @@ export const Root = {
   configure: ({ args }) => {
     state.token = args.token;
   },
+  status() {
+    if (!state.token) {
+      return "Please [configure the Slack token](https://api.slack.com/authentication/token-types#bot)";
+    } else {
+      return `Ready`;
+    }
+  }
 };
 
 export async function endpoint({ args: { path, body } }) {
