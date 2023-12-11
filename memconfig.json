@@ -6,13 +6,14 @@
         "fields": [
           {
             "name": "status",
-            "type": "String"
+            "type": "String",
+            "description": "The status of the Slack bot"
           }
         ],
         "actions": [
           {
             "name": "configure",
-            "description": "",
+            "description": "Configures the Slack bot with the provided token",
             "type": "Void",
             "params": [
               {
@@ -23,7 +24,7 @@
           },
           {
             "name": "sendMsg",
-            "description": "",
+            "description": "Sends a message using the provided text and recipient name",
             "type": "Void",
             "params": [
               {
@@ -63,9 +64,11 @@
                 "name": "headers",
                 "type": "String"
               }
-            ]
+            ],
+            "description": "Sends an HTTP request to the specified endpoint"
           }
-        ]
+        ],
+        "description": "Slack Bot program example"
       }
     ]
   },
