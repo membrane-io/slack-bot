@@ -68,7 +68,7 @@
             "description": "Sends an HTTP request to the specified endpoint"
           }
         ],
-        "description": "Root type for the Slack Bot program"
+        "description": "Slack Bot program example"
       }
     ]
   },
