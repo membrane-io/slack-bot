@@ -2,7 +2,7 @@
 // `root` is a reference to this program's root node
 // `state` is an object that persist across program updates. Store data here.
 import { nodes, root, state } from "membrane";
-import { api, parseQueryString } from "./utils";
+import { api, parseQS } from "./utils";
 
 export const Root = {
   configure: ({ args }) => {
